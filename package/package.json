@@ -1,6 +1,6 @@
 {
 	"name": "astro-variables",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "A package for managing variables between server and client in Astro projects",
 	"author": {
 		"email": "varharrie@gmail.com",
