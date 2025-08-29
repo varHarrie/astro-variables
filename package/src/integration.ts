@@ -1,5 +1,5 @@
 import { defineIntegration } from "astro-integration-kit";
-import "./type.d.ts";
+import "./type.d.js";
 
 export const integration = defineIntegration({
   name: "astro-variables",

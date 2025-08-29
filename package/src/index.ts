@@ -1,3 +1,5 @@
-import { integration } from "./integration.ts";
+import { integration } from "./integration.js";
 
 export default integration;
+
+export * from "./middleware.js";

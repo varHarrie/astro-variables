@@ -1,11 +1,11 @@
-import { defineVariables } from "astro-variables/middleware";
+import { defineVariables } from "astro-variables";
 import { sequence } from "astro:middleware";
 
-const variables = defineVariables(async (_ctx) => {
+const variables = defineVariables(async () => {
   return {
-    a: 1,
-    b: 2,
+    hello: "Hello World",
+    count: 1,
   };
 });
 
-export const onRequest = sequence(variables);
+export const onRequest = sequence(variables /** ...other middlewares */);

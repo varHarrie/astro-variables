@@ -25,9 +25,7 @@
 			"types": "./dist/index.d.ts",
 			"default": "./dist/index.js"
 		},
-		"./component": "./src/Variables.astro",
-		"./middleware": "./src/middleware.ts",
-		"./virtual-module": "./src/virtual-module.ts"
+		"./virtual-module": "./dist/virtual-module.js"
 	},
 	"files": [
 		"dist"

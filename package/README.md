@@ -52,9 +52,45 @@ export default defineConfig({
 });
 ```
 
-### Configuration
+3. Add middleware
 
-TODO:configuration
+```ts
+import { defineVariables } from "astro-variables";
+import { sequence } from "astro:middleware";
+
+const variables = defineVariables(async () => {
+  return {
+    hello: "Hello World",
+    count: 1,
+  };
+});
+
+export const onRequest = sequence(variables /** ...other middlewares */);
+```
+
+4. Use the variables in your components
+
+```tsx
+---
+import variables from 'astro:variables';
+
+// Access the variables in your server-side code:
+
+console.log(variables.hello, variables.count); // Get value by property
+console.log(variables()); // Execute the function to get all variables
+---
+
+<p>Hello: {variables.hello}</p>
+<p>Count: {variables.count}</p>
+<p>All: {JSON.stringify(variables())}</p>
+
+<script>
+  // Access the variables in your client-side code:
+  import variables from 'astro:variables';
+
+  console.log(variables.hello, variables.count); // Get value by property
+  console.log(variables()); // Execute the function to get all variables
+</script>
 
 ## Contributing
 

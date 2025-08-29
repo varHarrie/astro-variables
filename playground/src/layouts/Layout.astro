@@ -1,6 +1,5 @@
 ---
 import "../styles/global.css";
-import Variables from 'astro-variables/component';
 
 interface Props {
 	title: string;
@@ -18,17 +17,11 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<Variables />
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
-<script>
-	import variables from "astro:variables";
-
-	console.log(variables(), variables.b);
-</script>
 <style is:global>
 	:root {
 		--accent: 136, 58, 234;
