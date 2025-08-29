@@ -4,10 +4,6 @@ This is an [Astro integration](https://docs.astro.build/en/guides/integrations-g
 
 ## Usage
 
-### Prerequisites
-
-TODO:
-
 ### Installation
 
 Install the integration **automatically** using the Astro CLI:
