@@ -87,6 +87,7 @@ console.log(variables()); // Execute the function to get all variables
   console.log(variables.hello, variables.count); // Get value by property
   console.log(variables()); // Execute the function to get all variables
 </script>
+```
 
 ## Contributing
 
